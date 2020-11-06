@@ -48,115 +48,69 @@
                  }
             });
 
+
             $(document).on("input", "#input-xy-s", function() {
-                var xy_s =  $('#input-xy-s').val();
-                var xy_x =  $('#input-xy-x').val();
-                if (xy_s < 10 || xy_s >= 1000 || xy_x < 10 || xy_x >= 1000) {
-                    $('#txt-xy-1').text("-");
-                    $('#txt-xy-2').text("-");
-                } else {
-
-                    if (xy_s > 90 && xy_s < 140 && xy_x > 60 && xy_x < 90) {
-                        $('#txt-xy-1').text("收 140 ; 舒 90");
-                        $('#txt-xy-2').text("收 90 ; 舒 60");
-                    } else if (xy_s >= 140 || xy_x >= 90) {
-                        var xy_s_temp1 = Math.floor(xy_s * 1.05);
-                         var xy_s_temp2 = Math.floor(xy_s * 1.1);
-
-                         var xy_x_temp1 = Math.floor(xy_x * 1.05);
-                         var xy_x_temp2 = Math.floor(xy_x * 1.1);
-
-                        $('#txt-xy-1').text("(高) 收 " + xy_s_temp1 + " ~ "  +  xy_s_temp2 +" ; 舒 " + xy_x_temp1 + " ~ "  +  xy_x_temp2);
-
-
-                        var xy_s_temp3 = Math.floor(xy_s * 0.7);
-                         var xy_s_temp4 = Math.floor(xy_s * 0.8);
-
-                         var xy_x_temp3 = Math.floor(xy_x *  0.7);
-                         var xy_x_temp4 = Math.floor(xy_x * 0.8);
-
-                         $('#txt-xy-2').text("(高) 收 " + xy_s_temp3 + " ~ "  +  xy_s_temp4 +" ; 舒 " + xy_x_temp3 + " ~ "  +  xy_x_temp4);
+                var heart =  $('#input-xy-s').val();
+                 if (heart < 10 || heart >= 1000) {
+                    $('#txt-xys-1').text("-");
+                    $('#txt-xys-2').text("-");
+                 } else {
+                     if  (heart > 90 && heart < 140) {
+                         $('#txt-xys-1').text("90");
+                         $('#txt-xys-2').text("140");
+                     } else if (heart >= 140) {
+                         var heart_temp1 = heart * 1.05;
+                         var heart_temp2 = heart * 1.1;
+                         $('#txt-xys-1').text("(高) " + Math.floor(heart_temp1) + " ~ " + Math.floor(heart_temp2)) ;
+                         var heart_temp3 = heart * 0.7;
+                         var heart_temp4 = heart * 0.8;
+                         $('#txt-xys-2').text("(高) " + Math.floor(heart_temp3) + " ~ " + Math.floor(heart_temp4)) ;
                 
-                        
-                    } else {
-                        var xy_s_temp1 = Math.floor(xy_s * 1.2);
-                         var xy_s_temp2 = Math.floor(xy_s * 1.3);
-
-                         var xy_x_temp1 = Math.floor(xy_x * 1.2);
-                         var xy_x_temp2 = Math.floor(xy_x * 1.3);
-
-                        $('#txt-xy-1').text("(低) 收 " + xy_s_temp1 + " ~ "  +  xy_s_temp2 +" ; 舒 " + xy_x_temp1 + " ~ "  +  xy_x_temp2);
-
-
-                        var xy_s_temp3 = Math.floor(xy_s * 0.9);
-                         var xy_s_temp4 = Math.floor(xy_s * 0.95);
-
-                         var xy_x_temp3 = Math.floor(xy_x *  0.9);
-                         var xy_x_temp4 = Math.floor(xy_x * 0.95);
-
-                         $('#txt-xy-2').text("(低) 收 " + xy_s_temp3 + " ~ "  +  xy_s_temp4 +" ; 舒 " + xy_x_temp3 + " ~ "  +  xy_x_temp4);
+                     } else  {
+                         var heart_temp1 = heart * 1.2;
+                         var heart_temp2 = heart * 1.3;
+                         $('#txt-xys-1').text("(低) " + Math.floor(heart_temp1) + " ~ " + Math.floor(heart_temp2)) ;
+                         var heart_temp3 = heart * 0.9;
+                         var heart_temp4 = heart * 0.95;
+                         $('#txt-xys-2').text("(低) " +Math.floor(heart_temp3) + " ~ " + Math.floor(heart_temp4)) ;
                 
-                        
-
-                    }
-
-                }
+                     }
+                 }
             });
+
 
             $(document).on("input", "#input-xy-x", function() {
-                var xy_s =  $('#input-xy-s').val();
-                var xy_x =  $('#input-xy-x').val();
-                if (xy_s < 10 || xy_s >= 1000 || xy_x < 10 || xy_x >= 1000) {
-                    $('#txt-xy-1').text("-");
-                    $('#txt-xy-2').text("-");
-                } else {
-
-                    if (xy_s > 90 && xy_s < 140 && xy_x > 60 && xy_x < 90) {
-                        $('#txt-xy-1').text("收 140 ; 舒 90");
-                        $('#txt-xy-2').text("收 90 ; 舒 60");
-                    } else if (xy_s >= 140 || xy_x >= 90) {
-                        var xy_s_temp1 = Math.floor(xy_s * 1.05);
-                         var xy_s_temp2 = Math.floor(xy_s * 1.1);
-
-                         var xy_x_temp1 = Math.floor(xy_x * 1.05);
-                         var xy_x_temp2 = Math.floor(xy_x * 1.1);
-
-                        $('#txt-xy-1').text("(高) 收 " + xy_s_temp1 + " ~ "  +  xy_s_temp2 +" ; 舒 " + xy_x_temp1 + " ~ "  +  xy_x_temp2);
-
-
-                        var xy_s_temp3 = Math.floor(xy_s * 0.7);
-                         var xy_s_temp4 = Math.floor(xy_s * 0.8);
-
-                         var xy_x_temp3 = Math.floor(xy_x *  0.7);
-                         var xy_x_temp4 = Math.floor(xy_x * 0.8);
-
-                         $('#txt-xy-2').text("(高) 收 " + xy_s_temp3 + " ~ "  +  xy_s_temp4 +" ; 舒 " + xy_x_temp3 + " ~ "  +  xy_x_temp4);
+                var heart =  $('#input-xy-x').val();
+                 if (heart < 10 || heart >= 1000) {
+                    $('#txt-xyx-1').text("-");
+                    $('#txt-xyx-2').text("-");
+                 } else {
+                     if  (heart > 60 && heart < 90) {
+                         $('#txt-xyx-1').text("60");
+                         $('#txt-xyx-2').text("90");
+                     } else if (heart >= 90) {
+                         var heart_temp1 = heart * 1.05;
+                         var heart_temp2 = heart * 1.1;
+                         $('#txt-xyx-1').text("(高) " + Math.floor(heart_temp1) + " ~ " + Math.floor(heart_temp2)) ;
+                         var heart_temp3 = heart * 0.7;
+                         var heart_temp4 = heart * 0.8;
+                         $('#txt-xyx-2').text("(高) " + Math.floor(heart_temp3) + " ~ " + Math.floor(heart_temp4)) ;
                 
-                        
-                    } else {
-                        var xy_s_temp1 = Math.floor(xy_s * 1.2);
-                         var xy_s_temp2 = Math.floor(xy_s * 1.3);
-
-                         var xy_x_temp1 = Math.floor(xy_x * 1.2);
-                         var xy_x_temp2 = Math.floor(xy_x * 1.3);
-
-                        $('#txt-xy-1').text("(低) 收 " + xy_s_temp1 + " ~ "  +  xy_s_temp2 +" ; 舒 " + xy_x_temp1 + " ~ "  +  xy_x_temp2);
-
-
-                        var xy_s_temp3 = Math.floor(xy_s * 0.9);
-                         var xy_s_temp4 = Math.floor(xy_s * 0.95);
-
-                         var xy_x_temp3 = Math.floor(xy_x *  0.9);
-                         var xy_x_temp4 = Math.floor(xy_x * 0.95);
-
-                         $('#txt-xy-2').text("(低) 收 " + xy_s_temp3 + " ~ "  +  xy_s_temp4 +" ; 舒 " + xy_x_temp3 + " ~ "  +  xy_x_temp4);
+                     } else  {
+                         var heart_temp1 = heart * 1.2;
+                         var heart_temp2 = heart * 1.3;
+                         $('#txt-xyx-1').text("(低) " + Math.floor(heart_temp1) + " ~ " + Math.floor(heart_temp2)) ;
+                         var heart_temp3 = heart * 0.9;
+                         var heart_temp4 = heart * 0.95;
+                         $('#txt-xyx-2').text("(低) " +Math.floor(heart_temp3) + " ~ " + Math.floor(heart_temp4)) ;
                 
-                        
-
-                    }
-
-                }
+                     }
+                 }
             });
+
+           
+
+
         });
 
     </script>
@@ -164,29 +118,41 @@
 <body ontouchstart>
     <div>
     <div class="weui-flex">
-        <div ><div class="placeholder" >心跳报警上限</div></div>
+        <div ><div class="placeholder" >心率报警上限</div></div>
         <div class="weui-flex__item"><div class="placeholder" id= "txt-heart-1">-</div></div>
        
     </div>
     <div class="weui-flex">
-        <div ><div class="placeholder">心跳报警下限</div></div>
+        <div ><div class="placeholder">心率报警下限</div></div>
         <div class="weui-flex__item"><div class="placeholder" id= "txt-heart-2">-</div></div>
         
     </div>
     <div class="weui-flex">
-        <div ><div class="placeholder">血压报警上限</div></div>
-        <div class="weui-flex__item"><div class="placeholder" id= "txt-xy-1">-</div></div>
+        <div ><div class="placeholder">收缩压报警上限</div></div>
+        <div class="weui-flex__item"><div class="placeholder" id= "txt-xys-1">-</div></div>
        
     </div>
     <div class="weui-flex">
-        <div ><div class="placeholder">血压报警下限</div></div>
-        <div class="weui-flex__item"><div class="placeholder" id= "txt-xy-2">-</div></div>
+        <div ><div class="placeholder">收缩压报警下限</div></div>
+        <div class="weui-flex__item"><div class="placeholder" id= "txt-xys-2">-</div></div>
        
     </div>
+
+    <div class="weui-flex">
+        <div ><div class="placeholder">舒张压报警上限</div></div>
+        <div class="weui-flex__item"><div class="placeholder" id= "txt-xyx-1">-</div></div>
+       
+    </div>
+    <div class="weui-flex">
+        <div ><div class="placeholder">舒张压报警下限</div></div>
+        <div class="weui-flex__item"><div class="placeholder" id= "txt-xyx-2">-</div></div>
+       
+    </div>
+
 </div>
 <div class="weui-cells weui-cells_form">
     <div class="weui-cell">
-        <div class="weui-cell__hd"><label class="weui-label">心跳</label></div>
+        <div class="weui-cell__hd"><label class="weui-label">心率</label></div>
         <div class="weui-cell__bd">
             <input id = "input-heart" class="weui-input" pattern="[0-9]*" placeholder="次/分" type="number">
         </div>
