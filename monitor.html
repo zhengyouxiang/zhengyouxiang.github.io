@@ -8,39 +8,52 @@
     <link rel="stylesheet" href="css/weuix.css"/>
     <script src="js/zepto.min.js"></script>
     <script src="js/zepto.weui.js"></script>
+    <style>
+        .placeholder {
+            margin: 5px;
+            padding: 0 10px;
+            height: 2.3em;
+            line-height: 2.3em;
+            text-align: left;    
+        }
+    </style>
 </head>
 <body ontouchstart>
-<div>
-    <br/> 
-    <table class="weui-table weui-table-2n">
-        <tbody id="rank-list">
-            
-        <tr><td >心跳报警上限 </td><td></td></tr>
-            
-        <tr><td>心跳报警下限 </td><td></td></tr>
-            
-        <tr><td>血压报警上限</td><td></td></tr>
-            
-        <tr><td>血压报警下限</td><td ></td></tr>
-        
-        </tbody>
-    </table>
+    <div>
+    <div class="weui-flex">
+        <div class="weui-flex__item"><div class="placeholder">心跳报警上限</div></div>
+        <div class="weui-flex__item"><div class="placeholder">-</div></div>
+    </div>
+    <div class="weui-flex">
+        <div class="weui-flex__item"><div class="placeholder">心跳报警下限</div></div>
+        <div class="weui-flex__item"><div class="placeholder">-</div></div>
+    </div>
+    <div class="weui-flex">
+        <div class="weui-flex__item"><div class="placeholder">血压报警上限</div></div>
+        <div class="weui-flex__item"><div class="placeholder">-</div></div>
+    </div>
+    <div class="weui-flex">
+        <div class="weui-flex__item"><div class="placeholder">血压报警下限</div></div>
+        <div class="weui-flex__item"><div class="placeholder">-</div></div>
+    </div>
 </div>
 <div class="weui-cells weui-cells_form">
     <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">心跳</label></div>
         <div class="weui-cell__bd">
-            <input class="weui-input" pattern="[0-9]*" placeholder="请输入心跳 次/分" type="number">
+            <input class="weui-input" pattern="[0-9]*" placeholder="次/分" type="number">
         </div>
     </div>
     <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">上压</label></div>
         <div class="weui-cell__bd">
-            <input class="weui-input" pattern="[0-9]*" placeholder="请输入上压 mmgh" type="number">
+            <input class="weui-input" pattern="[0-9]*" placeholder="mmgh" type="number">
         </div>
-        <div class="weui-cell__hd"><label class="weui-label">下压</label></div>
+    </div>
+   <div class="weui-cell">
+    <div class="weui-cell__hd"><label class="weui-label">下压</label></div>
         <div class="weui-cell__bd">
-            <input class="weui-input" pattern="[0-9]*" placeholder="请输入下压 mmgh" type="number">
+            <input class="weui-input" pattern="[0-9]*" placeholder="mmgh" type="number">
         </div>
     </div>
 </div>
