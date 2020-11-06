@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>心电监护设置</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
     <link rel="stylesheet" href="css/weui.css"/>
     <link rel="stylesheet" href="css/weuix.css"/>
@@ -17,43 +17,190 @@
             text-align: left;    
         }
     </style>
+       <script>
+        $(function(){
+            $(document).on("input", "#input-heart", function() {
+                var heart =  $('#input-heart').val();
+                 if (heart < 10 || heart >= 1000) {
+                    $('#txt-heart-1').text("-");
+                    $('#txt-heart-2').text("-");
+                 } else {
+                     if  (heart > 60 && heart < 100) {
+                         $('#txt-heart-1').text("60");
+                         $('#txt-heart-2').text("100");
+                     } else if (heart >= 100) {
+                         var heart_temp1 = heart * 1.05;
+                         var heart_temp2 = heart * 1.1;
+                         $('#txt-heart-1').text(Math.floor(heart_temp1) + " ~ " + Math.floor(heart_temp2)) ;
+                         var heart_temp3 = heart * 0.7;
+                         var heart_temp4 = heart * 0.8;
+                         $('#txt-heart-2').text(Math.floor(heart_temp3) + " ~ " + Math.floor(heart_temp4)) ;
+                
+                     } else  {
+                         var heart_temp1 = heart * 1.2;
+                         var heart_temp2 = heart * 1.3;
+                         $('#txt-heart-1').text(Math.floor(heart_temp1) + " ~ " + Math.floor(heart_temp2)) ;
+                         var heart_temp3 = heart * 0.9;
+                         var heart_temp4 = heart * 0.95;
+                         $('#txt-heart-2').text(Math.floor(heart_temp3) + " ~ " + Math.floor(heart_temp4)) ;
+                
+                     }
+                 }
+            });
+
+            $(document).on("input", "#input-xy-s", function() {
+                var xy_s =  $('#input-xy-s').val();
+                var xy_x =  $('#input-xy-x').val();
+                if (xy_s < 10 || xy_s >= 1000 || xy_x < 10 || xy_x >= 1000) {
+                    $('#txt-xy-1').text("-");
+                    $('#txt-xy-2').text("-");
+                } else {
+
+                    if (xy_s > 90 && xy_s < 140 && xy_x > 60 && xy_x < 90) {
+                        $('#txt-xy-1').text("收 140 ; 舒 90");
+                        $('#txt-xy-2').text("收 90 ; 舒 60");
+                    } else if (xy_s >= 140 || xy_x >= 90) {
+                        var xy_s_temp1 = Math.floor(xy_s * 1.05);
+                         var xy_s_temp2 = Math.floor(xy_s * 1.1);
+
+                         var xy_x_temp1 = Math.floor(xy_x * 1.05);
+                         var xy_x_temp2 = Math.floor(xy_x * 1.1);
+
+                        $('#txt-xy-1').text("(高) 收 " + xy_s_temp1 + " ~ "  +  xy_s_temp2 +" ; 舒 " + xy_x_temp1 + " ~ "  +  xy_x_temp2);
+
+
+                        var xy_s_temp3 = Math.floor(xy_s * 0.7);
+                         var xy_s_temp4 = Math.floor(xy_s * 0.8);
+
+                         var xy_x_temp3 = Math.floor(xy_x *  0.7);
+                         var xy_x_temp4 = Math.floor(xy_x * 0.8);
+
+                         $('#txt-xy-2').text("(高) 收 " + xy_s_temp3 + " ~ "  +  xy_s_temp4 +" ; 舒 " + xy_x_temp3 + " ~ "  +  xy_x_temp4);
+                
+                        
+                    } else {
+                        var xy_s_temp1 = Math.floor(xy_s * 1.2);
+                         var xy_s_temp2 = Math.floor(xy_s * 1.3);
+
+                         var xy_x_temp1 = Math.floor(xy_x * 1.2);
+                         var xy_x_temp2 = Math.floor(xy_x * 1.3);
+
+                        $('#txt-xy-1').text("(低) 收 " + xy_s_temp1 + " ~ "  +  xy_s_temp2 +" ; 舒 " + xy_x_temp1 + " ~ "  +  xy_x_temp2);
+
+
+                        var xy_s_temp3 = Math.floor(xy_s * 0.9);
+                         var xy_s_temp4 = Math.floor(xy_s * 0.95);
+
+                         var xy_x_temp3 = Math.floor(xy_x *  0.9);
+                         var xy_x_temp4 = Math.floor(xy_x * 0.95);
+
+                         $('#txt-xy-2').text("(低) 收 " + xy_s_temp3 + " ~ "  +  xy_s_temp4 +" ; 舒 " + xy_x_temp3 + " ~ "  +  xy_x_temp4);
+                
+                        
+
+                    }
+
+                }
+            });
+
+            $(document).on("input", "#input-xy-x", function() {
+                var xy_s =  $('#input-xy-s').val();
+                var xy_x =  $('#input-xy-x').val();
+                if (xy_s < 10 || xy_s >= 1000 || xy_x < 10 || xy_x >= 1000) {
+                    $('#txt-xy-1').text("-");
+                    $('#txt-xy-2').text("-");
+                } else {
+
+                    if (xy_s > 90 && xy_s < 140 && xy_x > 60 && xy_x < 90) {
+                        $('#txt-xy-1').text("收 140 ; 舒 90");
+                        $('#txt-xy-2').text("收 90 ; 舒 60");
+                    } else if (xy_s >= 140 || xy_x >= 90) {
+                        var xy_s_temp1 = Math.floor(xy_s * 1.05);
+                         var xy_s_temp2 = Math.floor(xy_s * 1.1);
+
+                         var xy_x_temp1 = Math.floor(xy_x * 1.05);
+                         var xy_x_temp2 = Math.floor(xy_x * 1.1);
+
+                        $('#txt-xy-1').text("(高) 收 " + xy_s_temp1 + " ~ "  +  xy_s_temp2 +" ; 舒 " + xy_x_temp1 + " ~ "  +  xy_x_temp2);
+
+
+                        var xy_s_temp3 = Math.floor(xy_s * 0.7);
+                         var xy_s_temp4 = Math.floor(xy_s * 0.8);
+
+                         var xy_x_temp3 = Math.floor(xy_x *  0.7);
+                         var xy_x_temp4 = Math.floor(xy_x * 0.8);
+
+                         $('#txt-xy-2').text("(高) 收 " + xy_s_temp3 + " ~ "  +  xy_s_temp4 +" ; 舒 " + xy_x_temp3 + " ~ "  +  xy_x_temp4);
+                
+                        
+                    } else {
+                        var xy_s_temp1 = Math.floor(xy_s * 1.2);
+                         var xy_s_temp2 = Math.floor(xy_s * 1.3);
+
+                         var xy_x_temp1 = Math.floor(xy_x * 1.2);
+                         var xy_x_temp2 = Math.floor(xy_x * 1.3);
+
+                        $('#txt-xy-1').text("(低) 收 " + xy_s_temp1 + " ~ "  +  xy_s_temp2 +" ; 舒 " + xy_x_temp1 + " ~ "  +  xy_x_temp2);
+
+
+                        var xy_s_temp3 = Math.floor(xy_s * 0.9);
+                         var xy_s_temp4 = Math.floor(xy_s * 0.95);
+
+                         var xy_x_temp3 = Math.floor(xy_x *  0.9);
+                         var xy_x_temp4 = Math.floor(xy_x * 0.95);
+
+                         $('#txt-xy-2').text("(低) 收 " + xy_s_temp3 + " ~ "  +  xy_s_temp4 +" ; 舒 " + xy_x_temp3 + " ~ "  +  xy_x_temp4);
+                
+                        
+
+                    }
+
+                }
+            });
+        });
+
+    </script>
 </head>
 <body ontouchstart>
     <div>
     <div class="weui-flex">
-        <div class="weui-flex__item"><div class="placeholder">心跳报警上限</div></div>
-        <div class="weui-flex__item"><div class="placeholder">-</div></div>
+        <div ><div class="placeholder" >心跳报警上限</div></div>
+        <div class="weui-flex__item"><div class="placeholder" id= "txt-heart-1">-</div></div>
+       
     </div>
     <div class="weui-flex">
-        <div class="weui-flex__item"><div class="placeholder">心跳报警下限</div></div>
-        <div class="weui-flex__item"><div class="placeholder">-</div></div>
+        <div ><div class="placeholder">心跳报警下限</div></div>
+        <div class="weui-flex__item"><div class="placeholder" id= "txt-heart-2">-</div></div>
+        
     </div>
     <div class="weui-flex">
-        <div class="weui-flex__item"><div class="placeholder">血压报警上限</div></div>
-        <div class="weui-flex__item"><div class="placeholder">-</div></div>
+        <div ><div class="placeholder">血压报警上限</div></div>
+        <div class="weui-flex__item"><div class="placeholder" id= "txt-xy-1">-</div></div>
+       
     </div>
     <div class="weui-flex">
-        <div class="weui-flex__item"><div class="placeholder">血压报警下限</div></div>
-        <div class="weui-flex__item"><div class="placeholder">-</div></div>
+        <div ><div class="placeholder">血压报警下限</div></div>
+        <div class="weui-flex__item"><div class="placeholder" id= "txt-xy-2">-</div></div>
+       
     </div>
 </div>
 <div class="weui-cells weui-cells_form">
     <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">心跳</label></div>
         <div class="weui-cell__bd">
-            <input class="weui-input" pattern="[0-9]*" placeholder="次/分" type="number">
+            <input id = "input-heart" class="weui-input" pattern="[0-9]*" placeholder="次/分" type="number">
         </div>
     </div>
     <div class="weui-cell">
-        <div class="weui-cell__hd"><label class="weui-label">上压</label></div>
+        <div class="weui-cell__hd"><label class="weui-label">收缩压</label></div>
         <div class="weui-cell__bd">
-            <input class="weui-input" pattern="[0-9]*" placeholder="mmgh" type="number">
+            <input  id = "input-xy-s" class="weui-input" pattern="[0-9]*" placeholder="mmgh" type="number">
         </div>
     </div>
    <div class="weui-cell">
-    <div class="weui-cell__hd"><label class="weui-label">下压</label></div>
+    <div class="weui-cell__hd"><label class="weui-label">舒张压</label></div>
         <div class="weui-cell__bd">
-            <input class="weui-input" pattern="[0-9]*" placeholder="mmgh" type="number">
+            <input id = "input-xy-x"  class="weui-input" pattern="[0-9]*" placeholder="mmgh" type="number">
         </div>
     </div>
 </div>
