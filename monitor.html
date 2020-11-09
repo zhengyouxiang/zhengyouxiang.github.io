@@ -27,12 +27,13 @@
                     $('#txt-heart-2').text("-");
                  } else {
                      if  (heart > 60 && heart < 100) {
-                         $('#txt-heart-1').text("60");
-                         $('#txt-heart-2').text("100");
+                         $('#txt-heart-1').text("100");
+                         $('#txt-heart-2').text("60");
                      } else if (heart >= 100) {
                          var heart_temp1 = heart * 1.05;
                          var heart_temp2 = heart * 1.1;
                          $('#txt-heart-1').text(Math.floor(heart_temp1) + " ~ " + Math.floor(heart_temp2)) ;
+
                          var heart_temp3 = heart * 0.7;
                          var heart_temp4 = heart * 0.8;
                          $('#txt-heart-2').text(Math.floor(heart_temp3) + " ~ " + Math.floor(heart_temp4)) ;
@@ -57,8 +58,8 @@
                     $('#txt-xys-2').text("-");
                  } else {
                      if  (heart > 90 && heart < 140) {
-                         $('#txt-xys-1').text("90");
-                         $('#txt-xys-2').text("140");
+                         $('#txt-xys-1').text("140");
+                         $('#txt-xys-2').text("90");
                      } else if (heart >= 140) {
                          var heart_temp1 = heart * 1.05;
                          var heart_temp2 = heart * 1.1;
@@ -87,8 +88,8 @@
                     $('#txt-xyx-2').text("-");
                  } else {
                      if  (heart > 60 && heart < 90) {
-                         $('#txt-xyx-1').text("60");
-                         $('#txt-xyx-2').text("90");
+                         $('#txt-xyx-1').text("90");
+                         $('#txt-xyx-2').text("60");
                      } else if (heart >= 90) {
                          var heart_temp1 = heart * 1.05;
                          var heart_temp2 = heart * 1.1;
