@@ -162,30 +162,54 @@ var _hmt = _hmt || [];
 
 </div>
 <div class="weui-cells weui-cells_form">
+    
     <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">心率</label></div>
         <div class="weui-cell__bd">
             <input id = "input-heart" class="weui-input" pattern="[0-9]*" placeholder="次/分" type="number">
         </div>
     </div>
+
     <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">收缩压</label></div>
         <div class="weui-cell__bd">
-            <input  id = "input-xy-s" class="weui-input" pattern="[0-9]*" placeholder="mmgh" type="number">
+            <input  id = "input-xy-s" class="weui-input" pattern="[0-9]*" placeholder="mmHg" type="number">
         </div>
     </div>
+
+
    <div class="weui-cell">
-    <div class="weui-cell__hd"><label class="weui-label">舒张压</label></div>
+         <div class="weui-cell__hd"><label class="weui-label">舒张压</label></div>
         <div class="weui-cell__bd">
-            <input id = "input-xy-x"  class="weui-input" pattern="[0-9]*" placeholder="mmgh" type="number">
+            <input id = "input-xy-x"  class="weui-input" pattern="[0-9]*" placeholder="mmHg" type="number">
         </div>
     </div>
+
+
+
+    <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">呼吸报警</label></div>
+        <div class="weui-cell__bd">
+          10-30次/分 一般不低于8次/分
+        </div>
+    </div>
+    
+
+  <div class="weui-cell">
+       <div class="weui-cell__hd"><label class="weui-label">血氧饱和度的报警</label></div>
+        <div class="weui-cell__bd">
+         95%-100% 一般不低于90%
+        </div>
+    </div>
+    
 </div>
+
 <br/>
 <br/>
+
 <table>
     <thead>
-    <tr><th>异常情况</th><th>收缩压</th><th>舒张压</th></tr>
+    <tr><th>异常情况</th><th>收缩压 mmHg</th><th>舒张压 mmHg</th></tr>
     </thead>
     <tbody >
 
