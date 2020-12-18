@@ -62,7 +62,6 @@ var _hmt = _hmt || [];
                  }
             });
 
-
             $(document).on("input", "#input-xy-s", function() {
                 var heart =  $('#input-xy-s').val();
                 if (heart < 10 ) {
@@ -95,7 +94,6 @@ var _hmt = _hmt || [];
                  }
             });
 
-
             $(document).on("input", "#input-xy-x", function() {
                 var heart =  $('#input-xy-x').val();
                  if (heart < 10 ) {
@@ -127,12 +125,7 @@ var _hmt = _hmt || [];
                      }
                  }
             });
-
-           
-
-
         });
-
     </script>
 </head>
 <body ontouchstart>
@@ -140,53 +133,42 @@ var _hmt = _hmt || [];
     <div class="weui-flex">
         <div ><div class="placeholder" >心率报警上限</div></div>
         <div class="weui-flex__item"><div class="placeholder" id= "txt-heart-1">-</div></div>
-       
     </div>
     <div class="weui-flex">
         <div ><div class="placeholder">心率报警下限</div></div>
         <div class="weui-flex__item"><div class="placeholder" id= "txt-heart-2">-</div></div>
-        
     </div>
     <div class="weui-flex">
         <div ><div class="placeholder">收缩压报警上限</div></div>
         <div class="weui-flex__item"><div class="placeholder" id= "txt-xys-1">-</div></div>
-       
     </div>
     <div class="weui-flex">
         <div ><div class="placeholder">收缩压报警下限</div></div>
         <div class="weui-flex__item"><div class="placeholder" id= "txt-xys-2">-</div></div>
-       
     </div>
-
     <div class="weui-flex">
         <div ><div class="placeholder">舒张压报警上限</div></div>
         <div class="weui-flex__item"><div class="placeholder" id= "txt-xyx-1">-</div></div>
-       
     </div>
     <div class="weui-flex">
         <div ><div class="placeholder">舒张压报警下限</div></div>
         <div class="weui-flex__item"><div class="placeholder" id= "txt-xyx-2">-</div></div>
-       
     </div>
-
 </div>
+
 <div class="weui-cells weui-cells_form">
-    
     <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">心率</label></div>
         <div class="weui-cell__bd">
             <input id = "input-heart" class="weui-input" pattern="[0-9]*" placeholder="次/分" type="number">
         </div>
     </div>
-
     <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">收缩压</label></div>
         <div class="weui-cell__bd">
             <input  id = "input-xy-s" class="weui-input" pattern="[0-9]*" placeholder="mmHg" type="number">
         </div>
     </div>
-
-
    <div class="weui-cell">
          <div class="weui-cell__hd"><label class="weui-label">舒张压</label></div>
         <div class="weui-cell__bd">
@@ -194,51 +176,41 @@ var _hmt = _hmt || [];
         </div>
     </div>
 
-
-
     <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">呼吸报警：</label></div>
         <div class="weui-cell__bd">
           10-30次/分，一般不低于8次/分
         </div>
     </div>
-    
-
-  <div class="weui-cell">
+     <div class="weui-cell">
        <div class="weui-cell__hd"><label class="weui-label">血氧饱和度的报警：</label></div>
         <div class="weui-cell__bd">
          95%-100%，一般不低于90%
         </div>
     </div>
-    
 </div>
-
 <br/>
 <br/>
-
 
 <table>
     <thead>
-    <tr><th>异常情况</th><th>收缩压 mmHg</th><th>舒张压 mmHg</th></tr>
+    <tr><th>异常情况血压管理</th><th>收缩压 mmHg</th><th>舒张压 mmHg</th></tr>
     </thead>
     <tbody >
-
     <tr><td>急性缺血性卒中</td><td><200</td><td ><110</td></tr>
     <tr><td>急性缺血性卒中（有静脉溶栓适应症）</td><td><180</td><td ><100</td></tr>
     <tr><td>急性缺血性卒中（未接受静脉溶栓而计划进行动脉内治疗）</td><td >≤180</td><td>≤110</td></tr>
     <tr><td>血管开通后（高血压患者）</td><td >控制血压低于基础血压20-30，不低于90</td><td >控制血压低于基础血压20-30，不低于60</td></tr>
-    <tr><td>出血性脑卒中（收缩压150-220）</td><td >130-140</td><td ></td></tr>
-    <tr><td>出血性脑卒中（收缩压>220）</td><td> <160</td><td></td></tr>
-
+    <tr><td>出血性脑卒中（收缩压150-220）</td><td >目标值130-140</td><td ></td></tr>
+    <tr><td>出血性脑卒中（收缩压>220）</td><td>目标值160</td><td></td></tr>
 </tbody>
 </table>
 
 <div class="weui-cell">
      <div class="weui-cell__bd">
-      表格参考《中国急性缺血性脑卒中诊治指南2018》
+      表格参考《中国急性缺血性脑卒中诊治指南2018》、《中国脑出血诊治指南(2019)》
      </div>
  </div>
-
 </body>
 </html>
 
