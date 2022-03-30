@@ -59,6 +59,15 @@ var _hmt = _hmt || [];
                          $('#txt-heart-2').text(Math.floor(heart_temp3) + " ~ " + Math.floor(heart_temp4)) ;
                 
                      }
+
+                     if (heart <= 60) {
+                         $('#txt-heart-1').text("(低) "  +  $('#txt-heart-1').text());
+                         $('#txt-heart-2').text("(低) "  +  $('#txt-heart-2').text());
+                     }
+                     if (heart >= 100) {
+                         $('#txt-heart-1').text("(高) "  +  $('#txt-heart-1').text());
+                         $('#txt-heart-2').text("(高) "  +  $('#txt-heart-2').text());
+                    }
                  }
             });
 
