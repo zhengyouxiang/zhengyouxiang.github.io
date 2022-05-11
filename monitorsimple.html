@@ -38,10 +38,10 @@ var _hmt = _hmt || [];
                     $('#txt-heart-1').text("超出设置范围");
                     $('#txt-heart-2').text("-");
                  } else {
-                     if  (heart >= 70 && heart <= 90) {
+                     if  (heart > 60 && heart < 100) {
                          $('#txt-heart-1').text("100");
                          $('#txt-heart-2').text("60");
-                     } else if (heart > 90) {
+                     } else if (heart >= 100) {
                          var heart_temp1 = heart * 1.05;
                          var heart_temp2 = heart * 1.1;
                          $('#txt-heart-1').text(Math.floor(heart_temp1) + " ~ " + Math.floor(heart_temp2)) ;
